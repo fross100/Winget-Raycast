@@ -1,0 +1,69 @@
+{
+    "$schema": "https://www.raycast.com/schemas/extension.json",
+    "name": "winget-manager",
+    "title": "Winget Manager",
+    "description": "Manage Winget packages: search, install, and update.",
+    "icon": "icon-main.png",
+    "author": "fross",
+    "categories": [
+        "Developer Tools",
+        "Utilities"
+    ],
+    "license": "MIT",
+    "platforms": [
+        "Windows"
+    ],
+    "preferences": [
+        {
+            "name": "showInfoPanel",
+            "title": "Show Info Panel",
+            "description": "Whether to show the package information panel by default.",
+            "type": "checkbox",
+            "label": "Show Info Panel",
+            "default": true,
+            "required": false
+        }
+    ],
+    "commands": [
+        {
+            "name": "main-command",
+            "title": "Winget Manager",
+            "description": "Manage Winget packages: search, install, and update.",
+            "icon": "icon-main.png",
+            "mode": "view"
+        },
+        {
+            "name": "search-packages",
+            "title": "Search Packages",
+            "description": "Search for packages using Winget",
+            "icon": "icon-search.png",
+            "mode": "view"
+        },
+        {
+            "name": "update-packages",
+            "title": "Update Packages",
+            "description": "List and update outdated packages using Winget",
+            "icon": "icon-update.png",
+            "mode": "view"
+        }
+    ],
+    "dependencies": {
+        "@raycast/api": "^1.100.3",
+        "@raycast/utils": "^1.19.1"
+    },
+    "devDependencies": {
+        "@raycast/eslint-config": "^1.0.11",
+        "@types/node": "18.18.4",
+        "@types/react": "19.0.10",
+        "eslint": "^8.57.1",
+        "prettier": "^3.6.2",
+        "typescript": "^5.8.3"
+    },
+    "scripts": {
+        "build": "ray build -e dist",
+        "dev": "ray develop",
+        "fix-lint": "ray lint --fix",
+        "lint": "ray lint",
+        "publish": "ray publish"
+    }
+}
